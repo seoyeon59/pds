@@ -1,0 +1,17 @@
+# 1. 구별 인구수 분석
+
+# 2. 구별 20대와 30대의 인구수 분석
+
+----- 참고 -----
+
+# 어떤 인코딩을 해야하는지 확인하는 코드
+import chardet
+
+# human.csv 파일 인코딩 확인
+with open('human.csv', 'rb') as f:
+    result = chardet.detect(f.read())
+    print(result['encoding'])
+
+# 한글 폰트 깨짐 해결 코드
+plt.rcParams['font.family']='Malgun Gothic'
+plt.rcParams['axes.unicode_minus'] = False
